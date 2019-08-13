@@ -3,6 +3,7 @@
 #include <sys/timerfd.h>
 #include <inttypes.h>
 #include <stdio.h>
+#include <unistd.h>
 #include <strings.h>
 
 #include "TimerQueue.h"
@@ -17,7 +18,7 @@
 
 using namespace std;
 
-#define UINTPTR_MAX 0xffffffff
+//#define UINTPTR_MAX 0xffffffff
 
 TimerQueue::TimerQueue(EventLoop *pLoop)
     :_timerfd(createTimerfd())
